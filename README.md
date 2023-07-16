@@ -108,6 +108,11 @@
 	
 ### 8. Generate locales
 	dpkg-reconfigure locales
+ Bấm nút space để chọn
+ ![image](https://github.com/VANTHO15/custom_ubuntu/assets/56969447/277e86d0-b925-4957-bfda-2512c8dfa120)
+ ![image](https://github.com/VANTHO15/custom_ubuntu/assets/56969447/134327e8-9f9d-4d67-809e-e900cdc1b892)
+
+
 
 ### 9. Reconfigure resolvconf
 	dpkg-reconfigure resolvconf
