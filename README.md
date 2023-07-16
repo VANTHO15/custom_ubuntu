@@ -132,7 +132,8 @@
 		less \
 		ibus-unikey \
   		tree \
-    		openssh-server
+    		openssh-server \
+      		git
 ### 2. Install Applications
 	// visual code
 	sudo apt update && sudo apt upgrade -y
