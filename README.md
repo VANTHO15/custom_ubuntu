@@ -36,7 +36,7 @@
 	It is used for virtual filesystems like shm, ramfs, proc and tmpfs.
 	
 ### 2. Update hostname
-	echo "thonv12" > /etc/hostname	
+	echo "HuLa" > /etc/hostname	
 
 ### 3. Update apt/source.list
 	// update apt source-list
@@ -133,7 +133,7 @@
 		ibus-unikey \
   		tree \
     		openssh-server \
-      		git
+      		git-all
 ### 2. Install Applications
 	// visual code
 	sudo apt update && sudo apt upgrade -y
