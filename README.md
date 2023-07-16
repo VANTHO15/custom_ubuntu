@@ -130,7 +130,8 @@
 		vim \
 		nano \
 		less \
-		ibus-unikey
+		ibus-unikey \
+  		tree
 ### 2. Install Applications
 	// visual code
 	sudo apt update && sudo apt upgrade -y
