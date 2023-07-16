@@ -151,8 +151,9 @@
 	
 	// beyond compare
 	sudo dpkg --add-architecture i386
+ 	wget https://www.scootersoftware.com/bcompare-4.4.6.27483_amd64.deb
 	sudo apt update
-	sudo apt install ./bcompare-4.4.2.26348_amd64.deb
+	sudo apt install ./bcompare-4.4.6.27483_amd64.deb
 	
 	// notepad++
 	sudo apt-get install snapd snapd-xdg-open
