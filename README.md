@@ -206,13 +206,18 @@
 	mkdir livecd
 	sudo cp -rf /tmp/livecd/* livecd && sync
 	sudo rm -rf livecd/casper/filesystem.squashfs
+ 	sudo rm -rf livecd/casper/filesystem.size
+	sudo rm -rf livecd/casper/vmlinuz
+	sudo rm -rf livecd/casper/initrd
+	sudo rm -rf livecd/casper/filesystem.manifest
 
 ### 4. Compress chroot -> filesystem.squashfs
 	sudo mksquashfs chroot livecd/casper/filesystem.squashfs
 	
 ### 5. Copy linux -> livecd/casper/
-	sudo cp -rf chroot/boot/vmlinuz-4.15.0-180-generic livecd/casper/vmlinuz
-	sudo cp -rf chroot/boot/initrd.img-4.15.0-180-generic livecd/casper/initrd
+	ls -l chroot/boot/    ddeer xem teen file minhf laf gif
+	sudo cp -rf chroot/boot/vmlinuz-4.15.0-213-generic livecd/casper/vmlinuz
+	sudo cp -rf chroot/boot/initrd.img-4.15.0-213-generic livecd/casper/initrd
 	
 ### 6. Recreate manifest file
 	sudo chroot chroot/ dpkg-query -W --showformat='${Package} ${Version}\n' | sudo tee livecd/casper/filesystem.manifest
@@ -221,8 +226,9 @@
 	printf $(sudo du -sx --block-size=1 chroot | cut -f1) > filesystem.size && sudo cp -f filesystem.size livecd/casper/
 	
 ### 8. Recreate md5 checksum
+	sudo chmod 0666 livecd/casper/vmlinuz
 	find livecd -type f -print0 | xargs -0 md5sum > /tmp/md5sum.txt && cp -f /tmp/md5sum.txt livecd
 	
 ### 9. Create ISO image
-	cd livecd && sudo mkisofs -r -V "phonglt15-Ubuntu-Live-Custom" -b isolinux/isolinux.bin -c isolinux/boot.cat -cache-inodes -J -l -no-emul-boot \
-	-boot-load-size 4 -boot-info-table -o ../phonglt15-Ubuntu-Live-Custom.iso .
+	cd livecd && sudo mkisofs -r -V "thonv12-Ubuntu-Custom" -b isolinux/isolinux.bin -c isolinux/boot.cat -cache-inodes -J -l -no-emul-boot \
+	-boot-load-size 4 -boot-info-table -o ../thonv12-Ubuntu-Custom.iso .
