@@ -200,7 +200,7 @@
 
 ### 1. mout iSO image to customize-live-ubuntu-cd/livecd
 	mkdir /tmp/livecd
-	sudo mount -o loop ubuntu-18.04.6-desktop-amd64.iso /tmp/livecd 
+	sudo mount -o loop ubuntu-20.04.6-desktop-amd64.iso /tmp/livecd 
 
 ### 3. Remove rootfs file
 	mkdir livecd
