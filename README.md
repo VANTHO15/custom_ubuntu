@@ -1,5 +1,5 @@
 
-# Create Ubuntu Live CD From Scratch
+# Create Ubuntu 
 
 ## I. Setup Host
 
